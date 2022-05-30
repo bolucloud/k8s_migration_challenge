@@ -1,0 +1,1099 @@
+Terraform will perform the following actions:
+
+  # kubernetes_cluster_role.state_metrics_local will be destroyed
+  - resource "kubernetes_cluster_role" "state_metrics_local" {
+      - id = "state-metrics" -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 0 -> null
+          - labels           = {
+              - "app" = "state-metrics"
+            } -> null
+          - name             = "state-metrics" -> null
+          - resource_version = "70864" -> null
+          - uid              = "edcd1cbe-fcdd-4b48-9029-81427038ef81" -> null
+        }
+
+      - rule {
+          - api_groups        = [
+              - "",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "configmaps",
+              - "secrets",
+              - "nodes",
+              - "pods",
+              - "services",
+              - "resourcequotas",
+              - "replicationcontrollers",
+              - "limitranges",
+              - "persistentvolumeclaims",
+              - "persistentvolumes",
+              - "namespaces",
+              - "endpoints",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "extensions",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "daemonsets",
+              - "deployments",
+              - "replicasets",
+              - "ingresses",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "apps",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "statefulsets",
+              - "daemonsets",
+              - "deployments",
+              - "replicasets",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "batch",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "cronjobs",
+              - "jobs",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "autoscaling",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "horizontalpodautoscalers",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "authentication.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "tokenreviews",
+            ] -> null
+          - verbs             = [
+              - "create",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "authorization.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "subjectaccessreviews",
+            ] -> null
+          - verbs             = [
+              - "create",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "policy",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "poddisruptionbudgets",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "certificates.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "certificatesigningrequests",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "storage.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "storageclasses",
+              - "volumeattachments",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "admissionregistration.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "mutatingwebhookconfigurations",
+              - "validatingwebhookconfigurations",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "networking.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "networkpolicies",
+              - "ingresses",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+      - rule {
+          - api_groups        = [
+              - "coordination.k8s.io",
+            ] -> null
+          - non_resource_urls = [] -> null
+          - resource_names    = [] -> null
+          - resources         = [
+              - "leases",
+            ] -> null
+          - verbs             = [
+              - "list",
+              - "watch",
+            ] -> null
+        }
+    }
+
+  # kubernetes_cluster_role_binding.state_metrics_local will be destroyed
+  - resource "kubernetes_cluster_role_binding" "state_metrics_local" {
+      - id = "state-metrics-binding" -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 0 -> null
+          - labels           = {
+              - "app" = "state-metrics"
+            } -> null
+          - name             = "state-metrics-binding" -> null
+          - resource_version = "70874" -> null
+          - uid              = "8abb2d95-2fbd-4c08-a9b7-54ef45e651c8" -> null
+        }
+
+      - role_ref {
+          - api_group = "rbac.authorization.k8s.io" -> null
+          - kind      = "ClusterRole" -> null
+          - name      = "state-metrics" -> null
+        }
+
+      - subject {
+          - kind      = "ServiceAccount" -> null
+          - name      = "state-metrics" -> null
+          - namespace = "mon" -> null
+        }
+    }
+
+  # kubernetes_deployment.state_metrics_local will be destroyed
+  - resource "kubernetes_deployment" "state_metrics_local" {
+      - id = "mon/state-metrics" -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 1 -> null
+          - labels           = {
+              - "app" = "state-metrics"
+            } -> null
+          - name             = "state-metrics" -> null
+          - namespace        = "mon" -> null
+          - resource_version = "70901" -> null
+          - uid              = "aebf758e-5cb0-4b44-b8b0-a5fef280e221" -> null
+        }
+
+      - spec {
+          - min_ready_seconds         = 0 -> null
+          - paused                    = false -> null
+          - progress_deadline_seconds = 180 -> null
+          - replicas                  = "1" -> null
+          - revision_history_limit    = 10 -> null
+
+          - selector {
+              - match_labels = {
+                  - "app" = "state-metrics"
+                } -> null
+            }
+
+          - strategy {
+              - type = "Recreate" -> null
+            }
+
+          - template {
+              - metadata {
+                  - annotations = {
+                      - "ad.datadoghq.com/state-metrics.check_names"  = jsonencode(
+                            [
+                              - "kubernetes_state",
+                            ]
+                        )
+                      - "ad.datadoghq.com/state-metrics.init_configs" = jsonencode(
+                            [
+                              - {},
+                            ]
+                        )
+                      - "ad.datadoghq.com/state-metrics.instances"    = jsonencode(
+                            [
+                              - {
+                                  - kube_state_url          = "http://%%host%%:18080/metrics"
+                                  - label_joins             = {
+                                      - kube_deployment_labels = {
+                                          - labels_to_get   = [
+                                              - "label_app",
+                                              - "label_deploy_env",
+                                              - "label_type",
+                                              - "label_magic_net",
+                                              - "label_canary",
+                                            ]
+                                          - labels_to_match = [
+                                              - "deployment",
+                                            ]
+                                        }
+                                    }
+                                  - labels_mapper           = {
+                                      - label_app        = "app"
+                                      - label_deploy_env = "deploy_env"
+                                    }
+                                  - min_collection_interval = 30
+                                  - prometheus_timeout      = 30
+                                  - telemetry               = true
+                                },
+                            ]
+                        )
+                    } -> null
+                  - generation  = 0 -> null
+                  - labels      = {
+                      - "app" = "state-metrics"
+                    } -> null
+                  - namespace   = "mon" -> null
+                }
+
+              - spec {
+                  - active_deadline_seconds          = 0 -> null
+                  - automount_service_account_token  = true -> null
+                  - dns_policy                       = "ClusterFirst" -> null
+                  - enable_service_links             = false -> null
+                  - host_ipc                         = false -> null
+                  - host_network                     = true -> null
+                  - host_pid                         = false -> null
+                  - node_selector                    = {} -> null
+                  - restart_policy                   = "Always" -> null
+                  - service_account_name             = "state-metrics" -> null
+                  - share_process_namespace          = false -> null
+                  - termination_grace_period_seconds = 30 -> null
+
+                  - container {
+                      - args                       = [] -> null
+                      - command                    = [
+                          - "/kube-state-metrics",
+                          - "--port=18080",
+                          - "--telemetry-port=18081",
+                        ] -> null
+                      - image                      = "k8s.gcr.io/kube-state-metrics/kube-state-metrics:v1.9.8" -> null
+                      - image_pull_policy          = "IfNotPresent" -> null
+                      - name                       = "state-metrics" -> null
+                      - stdin                      = false -> null
+                      - stdin_once                 = false -> null
+                      - termination_message_path   = "/dev/termination-log" -> null
+                      - termination_message_policy = "File" -> null
+                      - tty                        = false -> null
+
+                      - readiness_probe {
+                          - failure_threshold     = 3 -> null
+                          - initial_delay_seconds = 5 -> null
+                          - period_seconds        = 10 -> null
+                          - success_threshold     = 1 -> null
+                          - timeout_seconds       = 5 -> null
+
+                          - http_get {
+                              - path   = "/healthz" -> null
+                              - port   = "18080" -> null
+                              - scheme = "HTTP" -> null
+                            }
+                        }
+
+                      - resources {
+                          - limits   = {
+                              - "cpu"    = "60m"
+                              - "memory" = "50Mi"
+                            } -> null
+                          - requests = {
+                              - "cpu"    = "30m"
+                              - "memory" = "30Mi"
+                            } -> null
+                        }
+                    }
+                }
+            }
+        }
+
+      - timeouts {}
+    }
+
+  # kubernetes_namespace.mon_local will be destroyed
+  - resource "kubernetes_namespace" "mon_local" {
+      - id = "mon" -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 0 -> null
+          - labels           = {} -> null
+          - name             = "mon" -> null
+          - resource_version = "70865" -> null
+          - uid              = "6a8f82d5-f3bc-49df-ac1d-a905db230ba0" -> null
+        }
+
+      - timeouts {}
+    }
+
+  # kubernetes_service_account.state_metrics_local will be destroyed
+  - resource "kubernetes_service_account" "state_metrics_local" {
+      - automount_service_account_token = false -> null
+      - default_secret_name             = "state-metrics-token-zcfqm" -> null
+      - id                              = "mon/state-metrics" -> null
+
+      - metadata {
+          - annotations      = {} -> null
+          - generation       = 0 -> null
+          - labels           = {
+              - "app" = "state-metrics"
+            } -> null
+          - name             = "state-metrics" -> null
+          - namespace        = "mon" -> null
+          - resource_version = "70873" -> null
+          - uid              = "7dd0b975-65fd-4218-a255-d874361a4b86" -> null
+        }
+
+      - timeouts {}
+    }
+
+  # module.state-metrics.kubernetes_cluster_role.state_metrics_local will be created
+  + resource "kubernetes_cluster_role" "state_metrics_local" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = {
+              + "app" = "state-metrics"
+            }
+          + name             = "state-metrics"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + rule {
+          + api_groups = [
+              + "",
+            ]
+          + resources  = [
+              + "configmaps",
+              + "secrets",
+              + "nodes",
+              + "pods",
+              + "services",
+              + "resourcequotas",
+              + "replicationcontrollers",
+              + "limitranges",
+              + "persistentvolumeclaims",
+              + "persistentvolumes",
+              + "namespaces",
+              + "endpoints",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "extensions",
+            ]
+          + resources  = [
+              + "daemonsets",
+              + "deployments",
+              + "replicasets",
+              + "ingresses",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "apps",
+            ]
+          + resources  = [
+              + "statefulsets",
+              + "daemonsets",
+              + "deployments",
+              + "replicasets",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "batch",
+            ]
+          + resources  = [
+              + "cronjobs",
+              + "jobs",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "autoscaling",
+            ]
+          + resources  = [
+              + "horizontalpodautoscalers",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "authentication.k8s.io",
+            ]
+          + resources  = [
+              + "tokenreviews",
+            ]
+          + verbs      = [
+              + "create",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "authorization.k8s.io",
+            ]
+          + resources  = [
+              + "subjectaccessreviews",
+            ]
+          + verbs      = [
+              + "create",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "policy",
+            ]
+          + resources  = [
+              + "poddisruptionbudgets",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "certificates.k8s.io",
+            ]
+          + resources  = [
+              + "certificatesigningrequests",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "storage.k8s.io",
+            ]
+          + resources  = [
+              + "storageclasses",
+              + "volumeattachments",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "admissionregistration.k8s.io",
+            ]
+          + resources  = [
+              + "mutatingwebhookconfigurations",
+              + "validatingwebhookconfigurations",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "networking.k8s.io",
+            ]
+          + resources  = [
+              + "networkpolicies",
+              + "ingresses",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+      + rule {
+          + api_groups = [
+              + "coordination.k8s.io",
+            ]
+          + resources  = [
+              + "leases",
+            ]
+          + verbs      = [
+              + "list",
+              + "watch",
+            ]
+        }
+    }
+
+  # module.state-metrics.kubernetes_cluster_role_binding.state_metrics_local will be created
+  + resource "kubernetes_cluster_role_binding" "state_metrics_local" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = {
+              + "app" = "state-metrics"
+            }
+          + name             = "state-metrics-binding"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + role_ref {
+          + api_group = "rbac.authorization.k8s.io"
+          + kind      = "ClusterRole"
+          + name      = "state-metrics"
+        }
+
+      + subject {
+          + api_group = (known after apply)
+          + kind      = "ServiceAccount"
+          + name      = "state-metrics"
+          + namespace = "mon"
+        }
+    }
+
+  # module.state-metrics.kubernetes_deployment.state_metrics_local will be created
+  + resource "kubernetes_deployment" "state_metrics_local" {
+      + id               = (known after apply)
+      + wait_for_rollout = true
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = {
+              + "app" = "state-metrics"
+            }
+          + name             = "state-metrics"
+          + namespace        = "mon"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+
+      + spec {
+          + min_ready_seconds         = 0
+          + paused                    = false
+          + progress_deadline_seconds = 180
+          + replicas                  = "1"
+          + revision_history_limit    = 10
+
+          + selector {
+              + match_labels = {
+                  + "app" = "state-metrics"
+                }
+            }
+
+          + strategy {
+              + type = "Recreate"
+
+              + rolling_update {
+                  + max_surge       = (known after apply)
+                  + max_unavailable = (known after apply)
+                }
+            }
+
+          + template {
+              + metadata {
+                  + annotations      = {
+                      + "ad.datadoghq.com/state-metrics.check_names"  = jsonencode(
+                            [
+                              + "kubernetes_state",
+                            ]
+                        )
+                      + "ad.datadoghq.com/state-metrics.init_configs" = jsonencode(
+                            [
+                              + {},
+                            ]
+                        )
+                      + "ad.datadoghq.com/state-metrics.instances"    = jsonencode(
+                            [
+                              + {
+                                  + kube_state_url          = "http://%%host%%:18080/metrics"
+                                  + label_joins             = {
+                                      + kube_deployment_labels = {
+                                          + labels_to_get   = [
+                                              + "label_app",
+                                              + "label_deploy_env",
+                                              + "label_type",
+                                              + "label_magic_net",
+                                              + "label_canary",
+                                            ]
+                                          + labels_to_match = [
+                                              + "deployment",
+                                            ]
+                                        }
+                                    }
+                                  + labels_mapper           = {
+                                      + label_app        = "app"
+                                      + label_deploy_env = "deploy_env"
+                                    }
+                                  + min_collection_interval = 30
+                                  + prometheus_timeout      = 30
+                                  + telemetry               = true
+                                },
+                            ]
+                        )
+                    }
+                  + generation       = (known after apply)
+                  + labels           = {
+                      + "app" = "state-metrics"
+                    }
+                  + name             = (known after apply)
+                  + namespace        = "mon"
+                  + resource_version = (known after apply)
+                  + uid              = (known after apply)
+                }
+
+              + spec {
+                  + automount_service_account_token  = true
+                  + dns_policy                       = "ClusterFirst"
+                  + enable_service_links             = false
+                  + host_ipc                         = false
+                  + host_network                     = true
+                  + host_pid                         = false
+                  + hostname                         = (known after apply)
+                  + node_name                        = (known after apply)
+                  + restart_policy                   = "Always"
+                  + service_account_name             = "state-metrics"
+                  + share_process_namespace          = false
+                  + termination_grace_period_seconds = 30
+
+                  + container {
+                      + command                    = [
+                          + "/kube-state-metrics",
+                          + "--port=18080",
+                          + "--telemetry-port=18081",
+                        ]
+                      + image                      = "k8s.gcr.io/kube-state-metrics/kube-state-metrics:v1.9.8"
+                      + image_pull_policy          = "IfNotPresent"
+                      + name                       = "state-metrics"
+                      + stdin                      = false
+                      + stdin_once                 = false
+                      + termination_message_path   = "/dev/termination-log"
+                      + termination_message_policy = (known after apply)
+                      + tty                        = false
+
+                      + readiness_probe {
+                          + failure_threshold     = 3
+                          + initial_delay_seconds = 5
+                          + period_seconds        = 10
+                          + success_threshold     = 1
+                          + timeout_seconds       = 5
+
+                          + http_get {
+                              + path   = "/healthz"
+                              + port   = "18080"
+                              + scheme = "HTTP"
+                            }
+                        }
+
+                      + resources {
+                          + limits   = {
+                              + "cpu"    = "60m"
+                              + "memory" = "50Mi"
+                            }
+                          + requests = {
+                              + "cpu"    = "30m"
+                              + "memory" = "30Mi"
+                            }
+                        }
+                    }
+
+                  + image_pull_secrets {
+                      + name = (known after apply)
+                    }
+
+                  + readiness_gate {
+                      + condition_type = (known after apply)
+                    }
+
+                  + volume {
+                      + name = (known after apply)
+
+                      + aws_elastic_block_store {
+                          + fs_type   = (known after apply)
+                          + partition = (known after apply)
+                          + read_only = (known after apply)
+                          + volume_id = (known after apply)
+                        }
+
+                      + azure_disk {
+                          + caching_mode  = (known after apply)
+                          + data_disk_uri = (known after apply)
+                          + disk_name     = (known after apply)
+                          + fs_type       = (known after apply)
+                          + kind          = (known after apply)
+                          + read_only     = (known after apply)
+                        }
+
+                      + azure_file {
+                          + read_only        = (known after apply)
+                          + secret_name      = (known after apply)
+                          + secret_namespace = (known after apply)
+                          + share_name       = (known after apply)
+                        }
+
+                      + ceph_fs {
+                          + monitors    = (known after apply)
+                          + path        = (known after apply)
+                          + read_only   = (known after apply)
+                          + secret_file = (known after apply)
+                          + user        = (known after apply)
+
+                          + secret_ref {
+                              + name      = (known after apply)
+                              + namespace = (known after apply)
+                            }
+                        }
+
+                      + cinder {
+                          + fs_type   = (known after apply)
+                          + read_only = (known after apply)
+                          + volume_id = (known after apply)
+                        }
+
+                      + config_map {
+                          + default_mode = (known after apply)
+                          + name         = (known after apply)
+                          + optional     = (known after apply)
+
+                          + items {
+                              + key  = (known after apply)
+                              + mode = (known after apply)
+                              + path = (known after apply)
+                            }
+                        }
+
+                      + csi {
+                          + driver            = (known after apply)
+                          + fs_type           = (known after apply)
+                          + read_only         = (known after apply)
+                          + volume_attributes = (known after apply)
+
+                          + node_publish_secret_ref {
+                              + name = (known after apply)
+                            }
+                        }
+
+                      + downward_api {
+                          + default_mode = (known after apply)
+
+                          + items {
+                              + mode = (known after apply)
+                              + path = (known after apply)
+
+                              + field_ref {
+                                  + api_version = (known after apply)
+                                  + field_path  = (known after apply)
+                                }
+
+                              + resource_field_ref {
+                                  + container_name = (known after apply)
+                                  + divisor        = (known after apply)
+                                  + resource       = (known after apply)
+                                }
+                            }
+                        }
+
+                      + empty_dir {
+                          + medium     = (known after apply)
+                          + size_limit = (known after apply)
+                        }
+
+                      + fc {
+                          + fs_type      = (known after apply)
+                          + lun          = (known after apply)
+                          + read_only    = (known after apply)
+                          + target_ww_ns = (known after apply)
+                        }
+
+                      + flex_volume {
+                          + driver    = (known after apply)
+                          + fs_type   = (known after apply)
+                          + options   = (known after apply)
+                          + read_only = (known after apply)
+
+                          + secret_ref {
+                              + name      = (known after apply)
+                              + namespace = (known after apply)
+                            }
+                        }
+
+                      + flocker {
+                          + dataset_name = (known after apply)
+                          + dataset_uuid = (known after apply)
+                        }
+
+                      + gce_persistent_disk {
+                          + fs_type   = (known after apply)
+                          + partition = (known after apply)
+                          + pd_name   = (known after apply)
+                          + read_only = (known after apply)
+                        }
+
+                      + git_repo {
+                          + directory  = (known after apply)
+                          + repository = (known after apply)
+                          + revision   = (known after apply)
+                        }
+
+                      + glusterfs {
+                          + endpoints_name = (known after apply)
+                          + path           = (known after apply)
+                          + read_only      = (known after apply)
+                        }
+
+                      + host_path {
+                          + path = (known after apply)
+                          + type = (known after apply)
+                        }
+
+                      + iscsi {
+                          + fs_type         = (known after apply)
+                          + iqn             = (known after apply)
+                          + iscsi_interface = (known after apply)
+                          + lun             = (known after apply)
+                          + read_only       = (known after apply)
+                          + target_portal   = (known after apply)
+                        }
+
+                      + local {
+                          + path = (known after apply)
+                        }
+
+                      + nfs {
+                          + path      = (known after apply)
+                          + read_only = (known after apply)
+                          + server    = (known after apply)
+                        }
+
+                      + persistent_volume_claim {
+                          + claim_name = (known after apply)
+                          + read_only  = (known after apply)
+                        }
+
+                      + photon_persistent_disk {
+                          + fs_type = (known after apply)
+                          + pd_id   = (known after apply)
+                        }
+
+                      + projected {
+                          + default_mode = (known after apply)
+
+                          + sources {
+                              + config_map {
+                                  + name     = (known after apply)
+                                  + optional = (known after apply)
+
+                                  + items {
+                                      + key  = (known after apply)
+                                      + mode = (known after apply)
+                                      + path = (known after apply)
+                                    }
+                                }
+
+                              + downward_api {
+                                  + items {
+                                      + mode = (known after apply)
+                                      + path = (known after apply)
+
+                                      + field_ref {
+                                          + api_version = (known after apply)
+                                          + field_path  = (known after apply)
+                                        }
+
+                                      + resource_field_ref {
+                                          + container_name = (known after apply)
+                                          + divisor        = (known after apply)
+                                          + resource       = (known after apply)
+                                        }
+                                    }
+                                }
+
+                              + secret {
+                                  + name     = (known after apply)
+                                  + optional = (known after apply)
+
+                                  + items {
+                                      + key  = (known after apply)
+                                      + mode = (known after apply)
+                                      + path = (known after apply)
+                                    }
+                                }
+
+                              + service_account_token {
+                                  + audience           = (known after apply)
+                                  + expiration_seconds = (known after apply)
+                                  + path               = (known after apply)
+                                }
+                            }
+                        }
+
+                      + quobyte {
+                          + group     = (known after apply)
+                          + read_only = (known after apply)
+                          + registry  = (known after apply)
+                          + user      = (known after apply)
+                          + volume    = (known after apply)
+                        }
+
+                      + rbd {
+                          + ceph_monitors = (known after apply)
+                          + fs_type       = (known after apply)
+                          + keyring       = (known after apply)
+                          + rados_user    = (known after apply)
+                          + rbd_image     = (known after apply)
+                          + rbd_pool      = (known after apply)
+                          + read_only     = (known after apply)
+
+                          + secret_ref {
+                              + name      = (known after apply)
+                              + namespace = (known after apply)
+                            }
+                        }
+
+                      + secret {
+                          + default_mode = (known after apply)
+                          + optional     = (known after apply)
+                          + secret_name  = (known after apply)
+
+                          + items {
+                              + key  = (known after apply)
+                              + mode = (known after apply)
+                              + path = (known after apply)
+                            }
+                        }
+
+                      + vsphere_volume {
+                          + fs_type     = (known after apply)
+                          + volume_path = (known after apply)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+  # module.state-metrics.kubernetes_namespace.mon_local will be created
+  + resource "kubernetes_namespace" "mon_local" {
+      + id = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + name             = "mon"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+  # module.state-metrics.kubernetes_service_account.state_metrics_local will be created
+  + resource "kubernetes_service_account" "state_metrics_local" {
+      + automount_service_account_token = false
+      + default_secret_name             = (known after apply)
+      + id                              = (known after apply)
+
+      + metadata {
+          + generation       = (known after apply)
+          + labels           = {
+              + "app" = "state-metrics"
+            }
+          + name             = "state-metrics"
+          + namespace        = "mon"
+          + resource_version = (known after apply)
+          + uid              = (known after apply)
+        }
+    }
+
+Plan: 5 to add, 0 to change, 5 to destroy.
